@@ -1,0 +1,7 @@
+.vscode
+src/npm-debug.log*
+src/yarn-debug.log*
+src/yarn-error.log*
+src/yarn.lock
+src/node_modules
+src/dist

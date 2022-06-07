@@ -1,0 +1,18 @@
+version: '3.9'
+
+networks:
+  frontend-net:
+    driver: bridge
+
+services:
+  frontend:
+    image: node:18 # node:<version> https://hub.docker.com/_/node
+    restart: always
+    ports:
+      - 3000:3000
+    networks:
+      - frontend-net
+    working_dir: /src
+    volumes:
+      - ./src:/src
+    command: bash -c "sleep infinity" # "npm install && npm run start"
